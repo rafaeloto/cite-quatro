@@ -26,7 +26,7 @@ const Game = () => {
   }, []);
 
   useEffect(() => {
-    let timer: number;
+    let timer: NodeJS.Timeout;
     if (isActive && timeLeft > 0) {
       timer = setTimeout(() => {
         setTimeLeft(timeLeft - 1);
