@@ -7,8 +7,8 @@ import './Game.css';
 const Game = () => {
   const [isActive, setIsActive] = useState(false);
   const [timeLeft, setTimeLeft] = useState(15);
-  const [category, setCategory] = useState('');
-  const [categories, setCategories] = useState<string[]>([]);
+  const [category, setCategory] = useState<{ title: string, answers: string[] }>({ title: '', answers: [] });
+  const [categories, setCategories] = useState<{ title: string, answers: string[] }[]>([]);
   const [playBeep, { stop: stopBeep }] = useSound(beepSound);
   const [playAlarm, { stop: stopAlarm }] = useSound(buzzerSound);
 
@@ -81,12 +81,21 @@ const Game = () => {
               </svg>
               <div className="timer-text">{timeLeft}</div>
             </div>
-            <p className='category'>{category}</p>
+            <p className='category'>{category.title}</p>
             <button onClick={stopGame}>{'Parar'}</button>
           </div>
         ) : (
           <div className='content'>
-            {timeLeft <= 0 && <p className='category'>{category}</p>}
+            {timeLeft <= 0 ? (
+              <>
+                <p className='category'>{category.title}</p>
+                <ol className='answersList'>
+                  {category.answers.map((answer, index) => (
+                    <li className='answer' key={index}>{answer}</li>
+                  ))}
+                </ol>
+              </>
+            ) : null}
             <button onClick={startGame}>{`Começar${timeLeft <= 0 ? ' de novo' : ''}`}</button>
           </div>
         )}

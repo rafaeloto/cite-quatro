@@ -94,6 +94,17 @@ button:hover {
   transition: stroke-dashoffset 1s linear;
 }
 
+.answersList {
+  margin: 0;
+  color: #fff;
+  list-style-type: circle;
+  text-align: left;
+}
+
+.answer {
+  margin-bottom: 10px;
+}
+
 /* Estilos para dispositivos desktop */
 @media (min-width: 768px) {
   .container {
@@ -102,7 +113,7 @@ button:hover {
   }
 
   .logo {
-    height: 300px;
+    height: 200px;
     border-radius: 50px;
   }
 
@@ -122,6 +133,10 @@ button:hover {
 
   .timer-text {
     font-size: 45px;
+  }
+
+  .answersList {
+    font-size: 30px;
   }
 }
 
@@ -154,6 +169,10 @@ button:hover {
 
   .timer-text {
     font-size: 45px;
+  }
+
+  .answersList {
+    font-size: 20px;
   }
 }
 
@@ -191,5 +210,9 @@ button:hover {
 
   .timer-text {
     font-size: 45px;
+  }
+
+  .answersList {
+    font-size: 20px;
   }
 }

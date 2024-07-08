@@ -1,168 +1,965 @@
 [
-  "Animais Selvagens",
-  "Arqueólogos Notáveis",
-  "Artistas Contemporâneos",
-  "Artistas Renascentistas",
-  "Astronautas",
-  "Astros da Música",
-  "Astros da Música Eletrônica",
-  "Astros da Música Pop",
-  "Astros do Hip Hop",
-  "Astros do Pop Rock",
-  "Astrônomos",
-  "Atores Brasileiros",
-  "Atores Estrangeiros",
-  "Atrizes Brasileiras",
-  "Atrizes Estrangeiras",
-  "Aves Coloridas",
-  "Aves Exóticas",
-  "Bandas de Rock",
-  "Bebidas Artesanais",
-  "Bebidas Clássicas",
-  "Bebidas Exóticas",
-  "Bebidas Refrescantes",
-  "Cantores de MPB",
-  "Capitais do Brasil",
-  "Capitais do Mundo",
-  "Cervejas Artesanais",
-  "Cidades Famosas da Itália",
-  "Cidades Históricas da Europa",
-  "Cidades Litorâneas",
-  "Cientistas Renomados",
-  "Comediantes Brasileiros",
-  "Comediantes Estrangeiros",
-  "Comidas Típicas Mineiras",
-  "Conflitos Históricos",
-  "Conflitos Militares do Brasil",
-  "Construções Antigas",
-  "Construções Gigantescas",
-  "Construções Modernas",
-  "Cores Quentes",
-  "Cores do Arco-íris",
-  "Cortes de Cabelo",
-  "Dançarinos",
-  "Danças Latinas",
-  "Danças Tradicionais",
-  "Descobertas Científicas",
-  "Designers de Moda",
-  "Destinos Exóticos",
-  "Deuses da Mitologia Grega",
-  "Ditadores",
-  "Doces Tradicionais Mineiros",
-  "Doces de Confeitaria",
-  "Doces de Festa Junina",
-  "Doces de Frutas",
-  "Documentários",
-  "Drinks Clássicos",
-  "Drinks com Cachaça",
-  "Duplas Sertanejas",
-  "Empresas Inovadoras",
-  "Epidemias Históricas",
-  "Escritores",
-  "Escultores",
-  "Esportes Aquáticos",
-  "Esportes Olímpicos",
-  "Esportes Olímpicos de Inverno",
-  "Esportes Radicais",
-  "Esportes com Bola",
-  "Esportes com Raquete",
-  "Espécies Marinhas",
-  "Espécies de Anfíbios",
-  "Espécies de Aves",
-  "Espécies de Mamíferos",
-  "Espécies de Peixe",
-  "Espécies de Répteis",
-  "Estilos Arquitetônicos",
-  "Estrelas do Pop",
-  "Estrelas do Rap",
-  "Estrelas do Rock",
-  "Fenômenos Naturais",
-  "Feriados Nacionais",
-  "Festas Tradicionais",
-  "Festivais de Música",
-  "Filmes da Disney",
-  "Filmes de Animação",
-  "Filmes de Ação",
-  "Filmes de Comédia",
-  "Filmes de Drama",
-  "Filmes de Ficção Científica",
-  "Filmes de Romance",
-  "Filmes de Suspense",
-  "Filmes de Terror",
-  "Filósofos",
-  "Frutas Cítricas",
-  "Frutas Doces",
-  "Frutas Vermelhas",
-  "Grupos Musicais",
-  "Grupos de Pagode",
-  "Guitarristas",
-  "Gêneros Literários",
-  "Heróis da Mitologia",
-  "Hobbies Manuais",
-  "Idiomas",
-  "Ilhas",
-  "Insetos que Voam",
-  "Instrumentos Musicais",
-  "Inventores",
-  "Invenções Antigas",
-  "Invenções Atuais",
-  "Jogadores da NBA",
-  "Jogadores de Basquete",
-  "Jogadores de Futebol Alemães",
-  "Jogadores de Futebol Americano",
-  "Jogadores de Futebol Brasileiros",
-  "Jogadores de Futebol Franceses",
-  "Jogadores de Vôlei",
-  "Jogos de Cartas",
-  "Jogos de Tabuleiro",
-  "Jogos de Videogame",
-  "Marcas de Carro",
-  "Marcas de Celular",
-  "Marcas de Computador",
-  "Marcas de Maquiagem",
-  "Marcas de Roupa",
-  "Mares",
-  "Matemáticos",
-  "Montanhas Famosas",
-  "Monumentos Históricos",
-  "Músicos Clássicos",
-  "Navegadores Descobridores",
-  "Obras de Arte",
-  "Obras de Ópera",
-  "Paisagens Deslumbrantes",
-  "Países da Europa",
-  "Personagens de Desenho",
-  "Personagens de Filmes",
-  "Personagens de Série",
-  "Personagens do Folclore Brasileiro",
-  "Personagens não Humanos",
-  "Pilotos de Fórmula 1",
-  "Pintores",
-  "Piratas",
-  "Planetas do Sistema Solar",
-  "Plataformas de Streaming",
-  "Povos Indígenas",
-  "Pratos Gourmet",
-  "Pratos Italianos",
-  "Pratos Veganos",
-  "Presidentes do Brasil",
-  "Presidentes dos EUA",
-  "Princesas de Contos de Fadas",
-  "Protagonistas Femininas",
-  "Religiões",
-  "Revoluções Históricas",
-  "Rios",
-  "Santos Católicos",
-  "Tendências de Moda",
-  "Times Campeões da Libertadores",
-  "Times da NBA",
-  "Tipos de Arquitetura",
-  "Tipos de Arte",
-  "Tipos de Gastronomia",
-  "Tradições Culturais",
-  "Tradições de Casamento",
-  "Tradições de Natal",
-  "Técnicas de Pintura",
-  "Universidades",
-  "Utensílios de Cozinha"
+  {
+    "title": "Animais Selvagens",
+    "answers": ["Onça Pintada", "Guepardo", "Orangotango", "Girafa"]
+  },
+  {
+    "title": "Arqueólogos Notáveis",
+    "answers": [
+      "Howard Carter",
+      "Mary Leakey",
+      "Heinrich Schliemann",
+      "Louis Leakey"
+    ]
+  },
+  {
+    "title": "Artistas Contemporâneos",
+    "answers": ["Banksy", "Damien Hirst", "Yayoi Kusama", "Jeff Koons"]
+  },
+  {
+    "title": "Artistas Renascentistas",
+    "answers": [
+      "Leonardo da Vinci",
+      "Michelangelo",
+      "Rafael Sanzio",
+      "Sandro Botticelli"
+    ]
+  },
+  {
+    "title": "Astronautas",
+    "answers": ["Neil Armstrong", "Yuri Gagarin", "Sally Ride", "Buzz Aldrin"]
+  },
+  {
+    "title": "Astros da Música",
+    "answers": ["Michael Jackson", "Elvis Presley", "Madonna", "Prince"]
+  },
+  {
+    "title": "Astros da Música Eletrônica",
+    "answers": ["David Guetta", "Calvin Harris", "Tiësto", "Avicii"]
+  },
+  {
+    "title": "Astros da Música Pop",
+    "answers": ["Beyoncé", "Justin Timberlake", "Taylor Swift", "Ariana Grande"]
+  },
+  {
+    "title": "Astros do Hip Hop",
+    "answers": ["Tupac Shakur", "Jay-Z", "Eminem", "Notorious B.I.G."]
+  },
+  {
+    "title": "Astros do Pop Rock",
+    "answers": ["Freddie Mercury", "Mick Jagger", "Kurt Cobain", "David Bowie"]
+  },
+  {
+    "title": "Astrônomos",
+    "answers": [
+      "Galileu Galilei",
+      "Johannes Kepler",
+      "Isaac Newton",
+      "Carl Sagan"
+    ]
+  },
+  {
+    "title": "Atores Brasileiros",
+    "answers": [
+      "Wagner Moura",
+      "Fernanda Montenegro",
+      "Lázaro Ramos",
+      "Débora Falabella"
+    ]
+  },
+  {
+    "title": "Atores Estrangeiros",
+    "answers": [
+      "Leonardo DiCaprio",
+      "Denzel Washington",
+      "Tom Hanks",
+      "Jonny Depp"
+    ]
+  },
+  {
+    "title": "Atrizes Brasileiras",
+    "answers": [
+      "Camila Pitanga",
+      "Taís Araújo",
+      "Marília Pêra",
+      "Fernanda Torres"
+    ]
+  },
+  {
+    "title": "Atrizes Estrangeiras",
+    "answers": [
+      "Angelina Jolie",
+      "Jennifer Lawrence",
+      "Julia Roberts",
+      "Cate Blanchett"
+    ]
+  },
+  {
+    "title": "Aves Coloridas",
+    "answers": ["Arara-azul", "Tucano", "Papagaio", "Periquito"]
+  },
+  {
+    "title": "Aves Exóticas",
+    "answers": ["Cacatua", "Avestruz", "Galo-do-mato", "Pica-pau-verde-barrado"]
+  },
+  {
+    "title": "Bandas de Rock",
+    "answers": ["The Beatles", "Led Zeppelin", "Queen", "Pink Floyd"]
+  },
+  {
+    "title": "Bebidas Artesanais",
+    "answers": [
+      "Cerveja artesanal",
+      "Vinho artesanal",
+      "Licor artesanal",
+      "Cachaça artesanal"
+    ]
+  },
+  {
+    "title": "Bebidas Clássicas",
+    "answers": ["Martini", "Margarita", "Negroni", "Mojito"]
+  },
+  {
+    "title": "Bebidas Exóticas",
+    "answers": ["Absinto", "Baijiu", "Chicha", "Makgeolli"]
+  },
+  {
+    "title": "Bebidas Refrescantes",
+    "answers": ["Limonada", "Água de coco", "Mojito", "Caipirinha"]
+  },
+  {
+    "title": "Cantores de MPB",
+    "answers": [
+      "Caetano Veloso",
+      "Gilberto Gil",
+      "Maria Bethânia",
+      "Chico Buarque"
+    ]
+  },
+  {
+    "title": "Capitais do Brasil",
+    "answers": ["Brasília", "Rio de Janeiro", "São Paulo", "Belém"]
+  },
+  {
+    "title": "Capitais do Mundo",
+    "answers": ["Paris", "Londres", "Tóquio", "Moscou"]
+  },
+  {
+    "title": "Cervejas Artesanais",
+    "answers": ["IPA", "Stout", "Saison", "Weissbier"]
+  },
+  {
+    "title": "Cidades Famosas da Itália",
+    "answers": ["Roma", "Veneza", "Florença", "Milão"]
+  },
+  {
+    "title": "Cidades Históricas da Europa",
+    "answers": ["Praga", "Viena", "Salzburgo", "Cracóvia"]
+  },
+  {
+    "title": "Cidades Litorâneas",
+    "answers": ["Rio de Janeiro", "Barcelona", "Sydney", "Miami"]
+  },
+  {
+    "title": "Cientistas Renomados",
+    "answers": [
+      "Albert Einstein",
+      "Marie Curie",
+      "Stephen Hawking",
+      "Charles Darwin"
+    ]
+  },
+  {
+    "title": "Comediantes Brasileiros",
+    "answers": [
+      "Chico Anysio",
+      "Tatá Werneck",
+      "Whindersson Nunes",
+      "Fábio Porchat"
+    ]
+  },
+  {
+    "title": "Comediantes Estrangeiros",
+    "answers": [
+      "Jerry Seinfeld",
+      "Ellen DeGeneres",
+      "Jim Carrey",
+      "Ricky Gervais"
+    ]
+  },
+  {
+    "title": "Comidas Típicas Mineiras",
+    "answers": [
+      "Feijão Tropeiro",
+      "Pão de Queijo",
+      "Frango com Quiabo",
+      "Doce de Leite"
+    ]
+  },
+  {
+    "title": "Conflitos Históricos",
+    "answers": [
+      "Segunda Guerra Mundial",
+      "Guerra Fria",
+      "Guerra Civil Americana",
+      "Guerras Napoleônicas"
+    ]
+  },
+  {
+    "title": "Conflitos Militares do Brasil",
+    "answers": [
+      "Revolução Constitucionalista de 1932",
+      "Guerra do Paraguai",
+      "Invasões Holandesas",
+      "Guerra dos Farrapos"
+    ]
+  },
+  {
+    "title": "Construções Antigas",
+    "answers": [
+      "Pirâmides de Gizé",
+      "Coliseu de Roma",
+      "Machu Picchu",
+      "Stonehenge"
+    ]
+  },
+  {
+    "title": "Construções Gigantescas",
+    "answers": [
+      "Burj Khalifa",
+      "Grande Muralha da China",
+      "Ponte Akashi Kaikyō",
+      "Barragem das Três Gargantas"
+    ]
+  },
+  {
+    "title": "Construções Modernas",
+    "answers": [
+      "Petronas Twin Towers",
+      "Cidade das Artes e das Ciências",
+      "One World Trade Center",
+      "The Shard"
+    ]
+  },
+  {
+    "title": "Cores Quentes",
+    "answers": ["Vermelho", "Laranja", "Amarelo", "Rosa"]
+  },
+  {
+    "title": "Cores do Arco-íris",
+    "answers": ["Vermelho", "Amarelo", "Azul", "Violeta"]
+  },
+  {
+    "title": "Cortes de Cabelo",
+    "answers": ["Surfista", "Chanel", "Degradê", "Franja"]
+  },
+  {
+    "title": "Dançarinos",
+    "answers": [
+      "Michael Jackson",
+      "Fred Astaire",
+      "Ginger Rogers",
+      "Mikhail Baryshnikov"
+    ]
+  },
+  {
+    "title": "Danças Latinas",
+    "answers": ["Salsa", "Merengue", "Bachata", "Cha-cha-cha"]
+  },
+  {
+    "title": "Danças Tradicionais",
+    "answers": ["Ballet", "Flamenco", "Hula", "Tango"]
+  },
+  {
+    "title": "Descobertas Científicas",
+    "answers": [
+      "Teoria da Relatividade",
+      "Evolução das Espécies",
+      "Descoberta do DNA",
+      "Leis de Kepler"
+    ]
+  },
+  {
+    "title": "Designers de Moda",
+    "answers": [
+      "Coco Chanel",
+      "Gianni Versace",
+      "Christian Dior",
+      "Alexander McQueen"
+    ]
+  },
+  {
+    "title": "Destinos Exóticos",
+    "answers": ["Machu Picchu", "Maldivas", "Ilhas Fiji", "Dubai"]
+  },
+  {
+    "title": "Deuses da Mitologia Grega",
+    "answers": ["Zeus", "Hades", "Afrodite", "Apolo"]
+  },
+  {
+    "title": "Ditadores",
+    "answers": ["Adolf Hitler", "Joseph Stalin", "Mao Zedong", "Fidel Castro"]
+  },
+  {
+    "title": "Doces Tradicionais Mineiros",
+    "answers": ["Doce de Leite", "Queijadinha", "Pé de Moleque", "Ambrosia"]
+  },
+  {
+    "title": "Doces de Confeitaria",
+    "answers": ["Macaron", "Torta de Morango", "Cupcake", "Trufa de Chocolate"]
+  },
+  {
+    "title": "Doces de Festa Junina",
+    "answers": ["Pé de Moleque", "Quentão", "Arroz Doce", "Canjica"]
+  },
+  {
+    "title": "Doces de Frutas",
+    "answers": [
+      "Goiabada",
+      "Compota de Maçã",
+      "Banana Caramelada",
+      "Figos Cristalizados"
+    ]
+  },
+  {
+    "title": "Documentários",
+    "answers": [
+      "March of the Penguins",
+      "Bowling for Columbine",
+      "Planet Earth",
+      "An Inconvenient Truth"
+    ]
+  },
+  {
+    "title": "Drinks Clássicos",
+    "answers": ["Margarita", "Martini", "Mojito", "Negroni"]
+  },
+  {
+    "title": "Drinks com Cachaça",
+    "answers": ["Caipirinha", "Batida de Coco", "Rabo-de-Galo", "Capeta"]
+  },
+  {
+    "title": "Duplas Sertanejas",
+    "answers": [
+      "Chitãozinho & Xororó",
+      "Jorge & Mateus",
+      "Zezé Di Camargo & Luciano",
+      "Bruno & Marrone"
+    ]
+  },
+  {
+    "title": "Empresas Inovadoras",
+    "answers": ["Apple", "Tesla", "Google", "SpaceX"]
+  },
+  {
+    "title": "Epidemias Históricas",
+    "answers": ["Peste Negra", "Gripe Espanhola", "Cólera", "Varíola"]
+  },
+  {
+    "title": "Escritores",
+    "answers": [
+      "William Shakespeare",
+      "Jane Austen",
+      "Gabriel García Márquez",
+      "Machado de Assis"
+    ]
+  },
+  {
+    "title": "Escultores",
+    "answers": [
+      "Michelangelo",
+      "Auguste Rodin",
+      "Antonio Canova",
+      "Barbara Hepworth"
+    ]
+  },
+  {
+    "title": "Esportes Aquáticos",
+    "answers": ["Natação", "Polo Aquático", "Surfe", "Vela"]
+  },
+  {
+    "title": "Esportes Olímpicos",
+    "answers": ["Atletismo", "Natação", "Ginástica Artística", "Esgrima"]
+  },
+  {
+    "title": "Esportes Olímpicos de Inverno",
+    "answers": ["Esqui Alpino", "Patinação Artística", "Biatlo", "Curling"]
+  },
+  {
+    "title": "Esportes Radicais",
+    "answers": ["Paraquedismo", "Surfe", "Escalada", "Base Jump"]
+  },
+  {
+    "title": "Esportes com Bola",
+    "answers": ["Futebol", "Basquete", "Vôlei", "Handebol"]
+  },
+  {
+    "title": "Esportes com Raquete",
+    "answers": ["Tênis", "Badminton", "Squash", "Tênis de Mesa"]
+  },
+  {
+    "title": "Espécies Marinhas",
+    "answers": ["Tubarão Branco", "Baleia Jubarte", "Arraia", "Peixe-palhaço"]
+  },
+  {
+    "title": "Espécies de Anfíbios",
+    "answers": ["Sapo Cururu", "Salamandra", "Rã Verde", "Perereca"]
+  },
+  {
+    "title": "Espécies de Aves",
+    "answers": ["Águia", "Papagaio", "Gavião", "Tucano"]
+  },
+  {
+    "title": "Espécies de Mamíferos",
+    "answers": ["Leão", "Golfinho", "Elefante", "Morcego"]
+  },
+  {
+    "title": "Espécies de Peixe",
+    "answers": ["Salmão", "Tilápia", "Atum", "Peixe-palhaço"]
+  },
+  {
+    "title": "Espécies de Répteis",
+    "answers": ["Cobra Coral", "Tartaruga Marinha", "Lagarto", "Crocodilo"]
+  },
+  {
+    "title": "Estilos Arquitetônicos",
+    "answers": ["Gótico", "Renascentista", "Barroco", "Art Déco"]
+  },
+  {
+    "title": "Estrelas do Pop",
+    "answers": ["Michael Jackson", "Madonna", "Beyoncé", "Justin Bieber"]
+  },
+  {
+    "title": "Estrelas do Rap",
+    "answers": ["Eminem", "Jay-Z", "Kendrick Lamar", "Cardi B"]
+  },
+  {
+    "title": "Estrelas do Rock",
+    "answers": ["Elvis Presley", "The Beatles", "Rolling Stones", "Queen"]
+  },
+  {
+    "title": "Fenômenos Naturais",
+    "answers": ["Aurora Boreal", "Arco-íris", "Tornado", "Terremoto"]
+  },
+  {
+    "title": "Feriados Nacionais",
+    "answers": ["Natal", "Carnaval", "Independência", "Páscoa"]
+  },
+  {
+    "title": "Festas Tradicionais",
+    "answers": ["Oktoberfest", "Carnaval", "Festa Junina", "Halloween"]
+  },
+  {
+    "title": "Festivais de Música",
+    "answers": ["Coachella", "Rock in Rio", "Lollapalooza", "Tomorrowland"]
+  },
+  {
+    "title": "Filmes da Disney",
+    "answers": ["O Rei Leão", "Frozen", "Aladdin", "Toy Story"]
+  },
+  {
+    "title": "Filmes de Animação",
+    "answers": ["Shrek", "Procurando Nemo", "A Era do Gelo", "A Bela e a Fera"]
+  },
+  {
+    "title": "Filmes de Ação",
+    "answers": ["007", "Velozes e Furiosos", "John Wick", "Missão Impossível"]
+  },
+  {
+    "title": "Filmes de Comédia",
+    "answers": [
+      "As Branquelas",
+      "Se Beber, Não Case!",
+      "Superbad",
+      "Quem Vai Ficar com Mary?"
+    ]
+  },
+  {
+    "title": "Filmes de Drama",
+    "answers": [
+      "O Poderoso Chefão",
+      "Forrest Gump",
+      "Cidade de Deus",
+      "Titanic"
+    ]
+  },
+  {
+    "title": "Filmes de Ficção Científica",
+    "answers": ["Blade Runner", "Matrix", "Interestelar", "Star Wars"]
+  },
+  {
+    "title": "Filmes de Romance",
+    "answers": [
+      "Titanic",
+      "Diário de uma Paixão",
+      "Orgulho e Preconceito",
+      "Antes do Amanhecer"
+    ]
+  },
+  {
+    "title": "Filmes de Suspense",
+    "answers": [
+      "Psicose",
+      "O Silêncio dos Inocentes",
+      "Seven: Os Sete Crimes Capitais",
+      "Ilha do Medo"
+    ]
+  },
+  {
+    "title": "Filmes de Terror",
+    "answers": ["O Exorcista", "Invocação do Mal", "It: A Coisa", "O Chamado"]
+  },
+  {
+    "title": "Filósofos",
+    "answers": ["Sócrates", "Platão", "Aristóteles", "Descartes"]
+  },
+  {
+    "title": "Frutas Cítricas",
+    "answers": ["Limão", "Laranja", "Tangerina", "Goiaba"]
+  },
+  {
+    "title": "Frutas Doces",
+    "answers": ["Maçã", "Pêssego", "Manga", "Melancia"]
+  },
+  {
+    "title": "Frutas Vermelhas",
+    "answers": ["Morango", "Cereja", "Framboesa", "Amora"]
+  },
+  {
+    "title": "Grupos Musicais",
+    "answers": ["The Beatles", "Rolling Stones", "Queen", "Pink Floyd"]
+  },
+  {
+    "title": "Grupos de Pagode",
+    "answers": [
+      "Fundo de Quintal",
+      "Exaltasamba",
+      "Sorriso Maroto",
+      "Grupo Revelação"
+    ]
+  },
+  {
+    "title": "Guitarristas",
+    "answers": ["Jimi Hendrix", "Eric Clapton", "Jimmy Page", "Slash"]
+  },
+  {
+    "title": "Gêneros Literários",
+    "answers": ["Romance", "Ficção Científica", "Fantasia", "Poesia"]
+  },
+  {
+    "title": "Heróis da Mitologia",
+    "answers": ["Hércules", "Perseu", "Thor", "Zeus"]
+  },
+  {
+    "title": "Hobbies Manuais",
+    "answers": ["Tricô", "Marcenaria", "Modelismo", "Origami"]
+  },
+  {
+    "title": "Idiomas",
+    "answers": ["Inglês", "Espanhol", "Francês", "Mandarim"]
+  },
+  {
+    "title": "Ilhas",
+    "answers": [
+      "Ilha de Páscoa",
+      "Ilha de Bali",
+      "Ilha de Santorini",
+      "Ilha de Capri"
+    ]
+  },
+  {
+    "title": "Insetos que Voam",
+    "answers": ["Borboleta", "Libélula", "Moscas", "Abelha"]
+  },
+  {
+    "title": "Instrumentos Musicais",
+    "answers": ["Violão", "Piano", "Bateria", "Saxofone"]
+  },
+  {
+    "title": "Inventores",
+    "answers": [
+      "Thomas Edison",
+      "Alexander Graham Bell",
+      "Albert Einstein",
+      "Nikola Tesla"
+    ]
+  },
+  {
+    "title": "Invenções Antigas",
+    "answers": ["Roda", "Imprensa", "Pólvora", "Relógio de Sol"]
+  },
+  {
+    "title": "Invenções Atuais",
+    "answers": [
+      "Smartphone",
+      "Internet",
+      "Carros Elétricos",
+      "Inteligência Artificial"
+    ]
+  },
+  {
+    "title": "Jogadores da NBA",
+    "answers": [
+      "LeBron James",
+      "Michael Jordan",
+      "Magic Johnson",
+      "Kobe Bryant"
+    ]
+  },
+  {
+    "title": "Jogadores de Basquete",
+    "answers": [
+      "Michael Jordan",
+      "Kareem Abdul-Jabbar",
+      "Larry Bird",
+      "Shaquille O'Neal"
+    ]
+  },
+  {
+    "title": "Jogadores de Futebol Alemães",
+    "answers": [
+      "Franz Beckenbauer",
+      "Gerd Müller",
+      "Lothar Matthäus",
+      "Thomas Müller"
+    ]
+  },
+  {
+    "title": "Jogadores de Futebol Americano",
+    "answers": ["Tom Brady", "Jerry Rice", "Peyton Manning", "Walter Payton"]
+  },
+  {
+    "title": "Jogadores de Futebol Brasileiros",
+    "answers": ["Pelé", "Zico", "Ronaldinho Gaúcho", "Neymar"]
+  },
+  {
+    "title": "Jogadores de Futebol Franceses",
+    "answers": [
+      "Zinedine Zidane",
+      "Thierry Henry",
+      "Kylian Mbappé",
+      "Michel Platini"
+    ]
+  },
+  {
+    "title": "Jogadores de Vôlei",
+    "answers": ["Giba", "Bernardinho", "Bruninho", "Wallace"]
+  },
+  {
+    "title": "Jogadoras de Vôlei",
+    "answers": [
+      "Fabi Alvim",
+      "Sheilla Castro",
+      "Jaqueline Carvalho",
+      "Fernanda Venturini"
+    ]
+  },
+  {
+    "title": "Jogos de Cartas",
+    "answers": ["Poker", "Truco", "Buraco", "Uno"]
+  },
+  {
+    "title": "Jogos de Tabuleiro",
+    "answers": ["Monopoly (Banco Imobiliário)", "War", "Catan", "Damas"]
+  },
+  {
+    "title": "Jogos de Videogame",
+    "answers": [
+      "Super Mario",
+      "The Legend of Zelda",
+      "Pokémon",
+      "Grand Theft Auto (GTA)"
+    ]
+  },
+  {
+    "title": "Marcas de Carro",
+    "answers": ["Toyota", "Ford", "BMW", "Mercedes-Benz"]
+  },
+  {
+    "title": "Marcas de Celular",
+    "answers": ["Apple", "Samsung", "Xiaomi", "Motorola"]
+  },
+  {
+    "title": "Marcas de Computador",
+    "answers": ["Apple", "Dell", "HP", "Lenovo"]
+  },
+  {
+    "title": "Marcas de Maquiagem",
+    "answers": ["MAC Cosmetics", "Maybelline", "NARS Cosmetics", "L'Oréal"]
+  },
+  {
+    "title": "Marcas de Roupa",
+    "answers": ["Nike", "Adidas", "Gucci", "Zara"]
+  },
+  {
+    "title": "Mares",
+    "answers": [
+      "Mar Mediterrâneo",
+      "Mar do Caribe",
+      "Mar da China Meridional",
+      "Mar do Norte"
+    ]
+  },
+  {
+    "title": "Matemáticos",
+    "answers": [
+      "Albert Einstein",
+      "Isaac Newton",
+      "Leonhard Euler",
+      "Alan Turing"
+    ]
+  },
+  {
+    "title": "Montanhas Famosas",
+    "answers": [
+      "Monte Everest",
+      "Monte Kilimanjaro",
+      "Monte Fuji",
+      "Monte McKinley"
+    ]
+  },
+  {
+    "title": "Monumentos Históricos",
+    "answers": [
+      "Torre Eiffel",
+      "Coliseu de Roma",
+      "Machu Picchu",
+      "Acrópole de Atenas"
+    ]
+  },
+  {
+    "title": "Músicos Clássicos",
+    "answers": ["Mozart", "Beethoven", "Bach", "Chopin"]
+  },
+  {
+    "title": "Navegadores Descobridores",
+    "answers": [
+      "Cristóvão Colombo",
+      "Vasco da Gama",
+      "Ferdinand Magellan",
+      "Amerigo Vespucci"
+    ]
+  },
+  {
+    "title": "Obras de Arte",
+    "answers": ["Mona Lisa", "A Noite Estrelada", "O Grito", "Guernica"]
+  },
+  {
+    "title": "Obras de Ópera",
+    "answers": ["A Flauta Mágica", "Carmen", "La Traviata", "Rigoletto"]
+  },
+  {
+    "title": "Paisagens Deslumbrantes",
+    "answers": [
+      "Grand Canyon",
+      "Aurora Boreal",
+      "Great Barrier Reef",
+      "Cataratas do Iguaçu"
+    ]
+  },
+  {
+    "title": "Países da Europa",
+    "answers": ["França", "Itália", "Espanha", "Alemanha"]
+  },
+  {
+    "title": "Personagens de Desenho",
+    "answers": ["Mickey Mouse", "Pernalonga", "Bob Esponja", "Goku"]
+  },
+  {
+    "title": "Personagens de Filmes",
+    "answers": ["Harry Potter", "Luke Skywalker", "Indiana Jones", "James Bond"]
+  },
+  {
+    "title": "Personagens de Série",
+    "answers": [
+      "Walter White (Breaking Bad)",
+      "Jon Snow (Game of Thrones)",
+      "Rachel Green (Friends)",
+      "Eleven (Stranger Things)"
+    ]
+  },
+  {
+    "title": "Personagens do Folclore Brasileiro",
+    "answers": ["Curupira", "Saci Pererê", "Boitatá", "Mula sem Cabeça"]
+  },
+  {
+    "title": "Personagens não Humanos",
+    "answers": ["R2-D2", "Gollum", "WALL-E", "Pikachu"]
+  },
+  {
+    "title": "Pilotos de Fórmula 1",
+    "answers": [
+      "Ayrton Senna",
+      "Michael Schumacher",
+      "Lewis Hamilton",
+      "Nelson Piquet"
+    ]
+  },
+  {
+    "title": "Pintores",
+    "answers": [
+      "Leonardo da Vinci",
+      "Vincent van Gogh",
+      "Pablo Picasso",
+      "Claude Monet"
+    ]
+  },
+  {
+    "title": "Piratas",
+    "answers": ["Barba Negra", "Barba Ruiva", "Anne Bonny", "Jack Sparrow"]
+  },
+  {
+    "title": "Planetas do Sistema Solar",
+    "answers": ["Terra", "Marte", "Júpiter", "Saturno"]
+  },
+  {
+    "title": "Plataformas de Streaming",
+    "answers": ["Netflix", "Amazon Prime Video", "Disney+", "HBO Max"]
+  },
+  {
+    "title": "Povos Indígenas",
+    "answers": ["Guarani", "Xavante", "Tupinambá", "Pataxó"]
+  },
+  {
+    "title": "Pratos Gourmet",
+    "answers": ["Foie Gras", "Caviar", "Trufas", "Carpaccio de Carne"]
+  },
+  {
+    "title": "Pratos Italianos",
+    "answers": ["Pizza Margherita", "Lasagna", "Risotto", "Spaghetti Carbonara"]
+  },
+  {
+    "title": "Pratos Veganos",
+    "answers": [
+      "Falafel",
+      "Tofu Stir-Fry",
+      "Bolo de Chocolate Vegano",
+      "Salada de Quinoa"
+    ]
+  },
+  {
+    "title": "Presidentes do Brasil",
+    "answers": [
+      "Getúlio Vargas",
+      "Juscelino Kubitschek",
+      "Lula",
+      "Dilma Rousseff"
+    ]
+  },
+  {
+    "title": "Presidentes dos EUA",
+    "answers": [
+      "George Washington",
+      "Abraham Lincoln",
+      "Franklin D. Roosevelt",
+      "Barack Obama"
+    ]
+  },
+  {
+    "title": "Princesas de Contos de Fadas",
+    "answers": ["Cinderela", "Branca de Neve", "Ariel", "Bela"]
+  },
+  {
+    "title": "Protagonistas Femininas",
+    "answers": [
+      "Katniss Everdeen (Jogos Vorazes)",
+      "Hermione Granger (Harry Potter)",
+      "Leia Organa (Star Wars)",
+      "Ellen Ripley (Alien)"
+    ]
+  },
+  {
+    "title": "Religiões",
+    "answers": ["Cristianismo", "Islamismo", "Hinduísmo", "Budismo"]
+  },
+  {
+    "title": "Revoluções Históricas",
+    "answers": [
+      "Revolução Francesa",
+      "Revolução Americana",
+      "Revolução Russa",
+      "Revolução Industrial"
+    ]
+  },
+  {
+    "title": "Rios",
+    "answers": ["Rio Amazonas", "Rio Nilo", "Rio Yangtzé", "Rio Mississipi"]
+  },
+  {
+    "title": "Santos Católicos",
+    "answers": [
+      "São Francisco de Assis",
+      "Santo Agostinho",
+      "Santa Maria",
+      "Santa Lúcia"
+    ]
+  },
+  {
+    "title": "Tendências de Moda",
+    "answers": ["Estilo Boho", "Minimalismo", "Streetwear", "Sustentabilidade"]
+  },
+  {
+    "title": "Times Campeões da Libertadores",
+    "answers": ["River Plate", "Boca Juniors", "Peñarol", "Atlético-MG"]
+  },
+  {
+    "title": "Times da NBA",
+    "answers": [
+      "Los Angeles Lakers",
+      "Boston Celtics",
+      "Golden State Warriors",
+      "Chicago Bulls"
+    ]
+  },
+  {
+    "title": "Tipos de Arquitetura",
+    "answers": ["Gótica", "Barroca", "Modernista", "Contemporânea"]
+  },
+  {
+    "title": "Tipos de Arte",
+    "answers": ["Pintura", "Escultura", "Fotografia", "Instalação"]
+  },
+  {
+    "title": "Tipos de Gastronomia",
+    "answers": ["Italiana", "Francesa", "Japonesa", "Indiana"]
+  },
+  {
+    "title": "Tradições Culturais",
+    "answers": [
+      "Carnaval no Brasil",
+      "Dia de los Muertos no México",
+      "Hanami no Japão",
+      "Thanksgiving nos EUA"
+    ]
+  },
+  {
+    "title": "Tradições de Casamento",
+    "answers": [
+      "Troca de Alianças",
+      "Vestido Branco",
+      "Jogar o Buquê",
+      "Cortar o Bolo"
+    ]
+  },
+  {
+    "title": "Tradições de Natal",
+    "answers": [
+      "Árvore de Natal",
+      "Presentes de Natal",
+      "Ceia de Natal",
+      "Amigo Oculto"
+    ]
+  },
+  {
+    "title": "Técnicas de Pintura",
+    "answers": ["Aquarela", "Óleo sobre tela", "Acrílico", "Fresco"]
+  },
+  {
+    "title": "Universidades",
+    "answers": ["Harvard", "MIT", "Oxford", "Stanford"]
+  },
+  {
+    "title": "Utensílios de Cozinha",
+    "answers": ["Faca de Chef", "Tábua de Corte", "Panela", "Espátula"]
+  }
 ]
