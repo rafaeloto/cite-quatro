@@ -64,7 +64,7 @@ const Game = () => {
     <>
       <div className="background-blur"></div>
       <div className="container">
-        <h1 className='title'>Cite 4</h1>
+        <img className='logo' src='/images/cite-4-logo.png' alt='Cite 4' />
         {isActive ? (
           <div className='content'>
             <div className="timer-circle">
