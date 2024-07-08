@@ -64,7 +64,7 @@ const Game = () => {
     <>
       <div className="background-blur"></div>
       <div className="container">
-        <h1>Cite 4</h1>
+        <h1 className='title'>Cite 4</h1>
         {isActive ? (
           <div className='content'>
             <div className="timer-circle">
@@ -81,12 +81,12 @@ const Game = () => {
               </svg>
               <div className="timer-text">{timeLeft}</div>
             </div>
-            <p>{category}</p>
+            <p className='category'>{category}</p>
             <button onClick={stopGame}>{'Parar'}</button>
           </div>
         ) : (
           <div className='content'>
-            {timeLeft <= 0 && <p>{category}</p>}
+            {timeLeft <= 0 && <p className='category'>{category}</p>}
             <button onClick={startGame}>{`Começar${timeLeft <= 0 ? ' de novo' : ''}`}</button>
           </div>
         )}
