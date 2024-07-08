@@ -20,7 +20,7 @@ body {
   background-size: cover;
   filter: blur(8px);
   -webkit-filter: blur(8px);
-  z-index: -1; /* Coloca o background atrás do conteúdo */
+  z-index: -1;
 }
 
 .container {
@@ -35,8 +35,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 3vh;
-  position: relative; /* Para garantir que o container fique sobre o background */
+  gap: 30px;
+  position: relative;
   z-index: 1;
 }
 
@@ -45,12 +45,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 3vh;
+  gap: 30px;
 }
 
-h1 {
+.title {
   color: #fff;
-  font-size: 10vw;
   margin: 0;
 }
 
@@ -58,11 +57,9 @@ button {
   background-color: #ff0000;
   color: #fff;
   border: none;
-  padding: 10px 20px;
-  font-size: 18px;
-  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
+  border-radius: 0.5rem;
 }
 
 button:hover {
@@ -70,25 +67,21 @@ button:hover {
   color: #000;
 }
 
-p {
+.category {
   margin: 0;
-  font-size: 7vw;
   color: #fff;
+  text-align: center;
 }
 
 .timer-circle {
   position: relative;
-  width: 200px; /* Ajuste para tamanho fixo */
-  height: 200px; /* Ajuste para tamanho fixo */
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
 }
 
 .timer-text {
-  font-size: 48px;
   color: #fff;
   position: absolute;
 }
@@ -102,9 +95,93 @@ p {
 
 .timer-path {
   stroke: #ffcc00;
-  stroke-width: 10;
+  stroke-width: 5px;
   fill: none;
   stroke-dasharray: 440;
-  stroke-dashoffset: 440;
   transition: stroke-dashoffset 1s linear;
+}
+
+/* Estilos para dispositivos desktop */
+@media (min-width: 768px) {
+  .title {
+    font-size: 100px;
+  }
+
+  button {
+    font-size: 25px;
+    padding: 10px 20px;
+  }
+
+  .category {
+    font-size: 70px;
+  }
+
+  .timer-circle {
+    width: 200px;
+    height: 200px;
+  }
+
+  .timer-text {
+    font-size: 45px;
+  }
+}
+
+/* Estilos para dispositivos móveis na vertical*/
+@media (max-width: 767px) {
+  .title {
+    font-size: 50px;
+  }
+
+  button {
+    font-size: 20px;
+    padding: 5px 10px;
+  }
+
+  .category {
+    font-size: 35px;
+    max-width: 250px;
+  }
+
+  .timer-circle {
+    width: 150px;
+    height: 150px;
+  }
+
+  .timer-text {
+    font-size: 45px;
+  }
+}
+
+/* Estilos para dispositivos móveis na horizontal*/
+@media (max-height: 400px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .title {
+    font-size: 50px;
+  }
+
+  .content {
+    width: 300px;
+  }
+
+  button {
+    font-size: 20px;
+    padding: 5px 10px;
+  }
+
+  .category {
+    font-size: 30px;
+  }
+
+  .timer-circle {
+    width: 150px;
+    height: 150px;
+  }
+
+  .timer-text {
+    font-size: 45px;
+  }
 }
