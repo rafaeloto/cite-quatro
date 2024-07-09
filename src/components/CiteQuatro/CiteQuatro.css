@@ -24,18 +24,24 @@ body {
 }
 
 .container {
-  text-align: center;
-  background-color: rgba(17, 17, 17, 0.8);
-  border-radius: 10px;
-  border: 2px solid #ff0000;
-  box-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   gap: 30px;
-  position: relative;
+  height: 95svh;
+  width: 90svw;
+  background-color: rgba(17, 17, 17, 0.8);
+  border: 2px solid #ff0000;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 0, 0.5);
   z-index: 1;
+}
+
+.logo {
+  height: 150px;
+  border-radius: 10px;
 }
 
 .content {
@@ -47,36 +53,43 @@ body {
 }
 
 button {
+  font-size: 20px;
+  padding: 5px 10px;
   background-color: #ff0000;
   color: #fff;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s ease-in-out;
   border-radius: 0.5rem;
-}
 
-button:hover {
-  background-color: #ffcc00;
-  color: #000;
+  &:hover {
+    background-color: #ffcc00;
+    color: #000;
+  }
 }
 
 .category {
   margin: 0;
+  font-size: 35px;
+  max-width: 250px;
   color: #fff;
   text-align: center;
 }
 
 .timer-circle {
-  position: relative;
-  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
 }
 
 .timer-text {
-  color: #fff;
   position: absolute;
+  font-size: 45px;
+  color: #fff;
 }
 
 .timer-svg {
@@ -95,85 +108,16 @@ button:hover {
 }
 
 .answersList {
-  margin: 0;
-  color: #fff;
-  list-style-type: circle;
   text-align: left;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  color: #fff;
+  list-style-type: none;
 }
 
 .answer {
   margin-bottom: 10px;
-}
-
-/* Estilos para dispositivos desktop */
-@media (min-width: 768px) {
-  .container {
-    height: 800px;
-    width: 1200px;
-  }
-
-  .logo {
-    height: 200px;
-    border-radius: 50px;
-  }
-
-  button {
-    font-size: 25px;
-    padding: 10px 20px;
-  }
-
-  .category {
-    font-size: 70px;
-  }
-
-  .timer-circle {
-    width: 200px;
-    height: 200px;
-  }
-
-  .timer-text {
-    font-size: 45px;
-  }
-
-  .answersList {
-    font-size: 30px;
-  }
-}
-
-/* Estilos para dispositivos móveis na vertical*/
-@media (max-width: 767px) {
-  .container {
-    height: 750px;
-    width: 340px;
-  }
-
-  .logo {
-    height: 150px;
-    border-radius: 10px;
-  }
-
-  button {
-    font-size: 20px;
-    padding: 5px 10px;
-  }
-
-  .category {
-    font-size: 35px;
-    max-width: 250px;
-  }
-
-  .timer-circle {
-    width: 150px;
-    height: 150px;
-  }
-
-  .timer-text {
-    font-size: 45px;
-  }
-
-  .answersList {
-    font-size: 20px;
-  }
 }
 
 /* Estilos para dispositivos móveis na horizontal*/
@@ -181,8 +125,8 @@ button:hover {
   .container {
     flex-direction: row;
     justify-content: space-evenly;
-    height: 330px;
-    width: 800px;
+    height: 90svh;
+    width: 95svw;
   }
 
   .logo {
@@ -190,29 +134,7 @@ button:hover {
     border-radius: 20px;
   }
 
-  .content {
-    width: 300px;
-  }
-
-  button {
-    font-size: 20px;
-    padding: 5px 10px;
-  }
-
   .category {
     font-size: 30px;
-  }
-
-  .timer-circle {
-    width: 150px;
-    height: 150px;
-  }
-
-  .timer-text {
-    font-size: 45px;
-  }
-
-  .answersList {
-    font-size: 20px;
   }
 }
