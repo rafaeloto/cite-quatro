@@ -89,11 +89,11 @@ const CiteQuatro = () => {
             {timeLeft <= 0 ? (
               <>
                 <p className='category'>{category.title}</p>
-                <ol className='answersList'>
+                <ul className='answersList'>
                   {category.answers.map((answer, index) => (
                     <li className='answer' key={index}>{answer}</li>
                   ))}
-                </ol>
+                </ul>
               </>
             ) : null}
             <button onClick={startGame}>{`Começar${timeLeft <= 0 ? ' de novo' : ''}`}</button>
