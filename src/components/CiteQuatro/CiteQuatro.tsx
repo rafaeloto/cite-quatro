@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import useSound from 'use-sound';
 import beepSound from '/sounds/beep.mp3';
 import buzzerSound from '/sounds/buzzer.mp3';
-import './Game.css';
+import './CiteQuatro.css';
 
 const Game = () => {
   const [isActive, setIsActive] = useState(false);
