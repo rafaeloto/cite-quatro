@@ -1,0 +1,75 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-logo {
+  height: 300px;
+  width: auto;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.game-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 700px;
+  padding: 10px 20px;
+  gap: 20px;
+  border: 1px solid transparent;
+  border-radius: 30px;
+  color: #fff;
+  text-decoration: none;
+  transition: border-color 0.3s ease-in-out;
+
+  &:hover {
+    border-color: #ffffff36;
+  }
+
+  img {
+    height: 100px;
+    flex-shrink: 0;
+  }
+
+  p {
+    flex: 1;
+    margin: 0;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .home-logo {
+    height: 200px;
+  }
+
+  .game-card {
+    width: 330px;
+    padding: 10px 12px;
+    gap: 10px;
+    border-color: #ffffff36;
+
+    p {
+      font-size: 17px;
+    }
+  }
+}
