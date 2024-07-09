@@ -5,8 +5,13 @@
   color: #fff;
 }
 
-.logo {
-  height: 200px;
+.logo.home {
+  height: 300px;
+  width: auto;
+}
+
+.logo.game {
+  height: 100px;
   width: auto;
 }
 

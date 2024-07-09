@@ -49,7 +49,7 @@ const ViraCopos = () => {
 
   return (
     <div className="vira-copos-container">
-      <img className='logo' src='/images/vira-copos-logo.png' alt='Vira Copos' />
+      <img className={`logo ${chosen === null ? 'home' : 'game'}`} src='/images/vira-copos-logo.png' alt='Vira Copos' />
       {chosen === null ? (
         <button className="draw-button" onClick={handleDrawNumber}>Sortear</button>
       ) : (
