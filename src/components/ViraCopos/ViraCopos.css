@@ -1,0 +1,86 @@
+.vira-copos-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+
+.logo {
+  height: 200px;
+  width: auto;
+}
+
+.draw-button {
+  padding: 10px 20px;
+  font-size: 20px;
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #ffcc00;
+    color: #000;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+}
+
+.grid-button {
+  padding: 12px;
+  font-size: 23px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #999;
+  }
+}
+
+.grid-button.eliminated {
+  background-color: #ccccccb3;
+  color: #a8a8a8;
+  cursor: not-allowed;
+}
+
+.grid-button.winner {
+  background-color: #ffcc00;
+  color: #000;
+  cursor: default;
+}
+
+.reset-button {
+  grid-column: span 3;
+  background-color: #ff0000;
+  color: #fff;
+  font-size: 20px;
+  padding: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #ffcc00;
+    color: #000;
+  }
+}
+
+.reset-button:disabled {
+  background-color: #ccccccb3;
+  color: #a8a8a8;
+  cursor: not-allowed;
+
+  &:hover {
+    background-color: #ccccccb3;
+    color: #a8a8a8;
+  }
+}

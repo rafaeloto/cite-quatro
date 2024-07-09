@@ -4,7 +4,7 @@ import beepSound from '/sounds/beep.mp3';
 import buzzerSound from '/sounds/buzzer.mp3';
 import './CiteQuatro.css';
 
-const Game = () => {
+const CiteQuatro = () => {
   const [isActive, setIsActive] = useState(false);
   const [timeLeft, setTimeLeft] = useState(15);
   const [category, setCategory] = useState<{ title: string, answers: string[] }>({ title: '', answers: [] });
@@ -104,4 +104,4 @@ const Game = () => {
   );
 };
 
-export default Game;
+export default CiteQuatro;
