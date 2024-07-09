@@ -30,7 +30,7 @@ body {
   align-items: center;
   text-align: center;
   gap: 30px;
-  height: 85svh;
+  height: 90svh;
   width: 85svw;
   background-color: rgba(17, 17, 17, 0.8);
   border: 2px solid #ff0000;
@@ -125,6 +125,8 @@ button {
   .container {
     flex-direction: row;
     justify-content: space-evenly;
+    height: 85svh;
+    width: 90svw;
   }
 
   .logo {
