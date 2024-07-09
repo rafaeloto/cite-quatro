@@ -30,8 +30,8 @@ body {
   align-items: center;
   text-align: center;
   gap: 30px;
-  height: 90svh;
-  width: 85svw;
+  height: 95svh;
+  width: 90svw;
   background-color: rgba(17, 17, 17, 0.8);
   border: 2px solid #ff0000;
   border-radius: 10px;
@@ -125,8 +125,8 @@ button {
   .container {
     flex-direction: row;
     justify-content: space-evenly;
-    height: 85svh;
-    width: 90svw;
+    height: 90svh;
+    width: 95svw;
   }
 
   .logo {
