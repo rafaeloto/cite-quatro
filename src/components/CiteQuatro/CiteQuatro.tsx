@@ -26,6 +26,16 @@ const CiteQuatro = () => {
   }, []);
 
   useEffect(() => {
+    const requestFullscreen = () => {
+      const elem = document.documentElement;
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+      }
+    };
+    requestFullscreen();
+  }, []);
+
+  useEffect(() => {
     let timer: NodeJS.Timeout;
     if (isActive && timeLeft > 0) {
       timer = setTimeout(() => {
