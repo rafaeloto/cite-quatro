@@ -1,5 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { isFullScreenEnabled, toggleFullScreen } from '../../utils/fullscreen';
+import { stopAllSounds } from '../../utils/soundUtils';
 import useSound from 'use-sound';
 import beepSound from '/sounds/beep.mp3';
 import buzzerSound from '/sounds/buzzer.mp3';
@@ -11,7 +12,14 @@ const CiteQuatro = () => {
   const [category, setCategory] = useState<{ title: string, answers: string[] }>({ title: '', answers: [] });
   const [categories, setCategories] = useState<{ title: string, answers: string[] }[]>([]);
   const [playBeep, { stop: stopBeep }] = useSound(beepSound);
-  const [playAlarm, { stop: stopAlarm }] = useSound(buzzerSound);
+  const [playBuzzer, { stop: stopBuzzer }] = useSound(buzzerSound);
+
+  const soundsRef = useRef<{ [key: string]: () => void }>({});
+
+  useEffect(() => {
+    soundsRef.current['beepSound'] = stopBeep;
+    soundsRef.current['buzzerSound'] = stopBuzzer;
+  }, [stopBeep, stopBuzzer]);
 
   useEffect(() => {
     const fetchCategories = async () => {
@@ -37,11 +45,11 @@ const CiteQuatro = () => {
       }, 1000);
     } else if (timeLeft === 0) {
       stopBeep();
-      playAlarm();
+      playBuzzer();
       setIsActive(false);
     }
     return () => clearTimeout(timer);
-  }, [isActive, timeLeft, playBeep, playAlarm, stopBeep]);
+  }, [isActive, timeLeft, playBeep, playBuzzer, stopBeep]);
 
   const getRandomCategory = () => {
     const randomIndex = Math.floor(Math.random() * categories.length);
@@ -49,17 +57,23 @@ const CiteQuatro = () => {
   };
 
   const startGame = () => {
-    stopAlarm();
+    stopAllSounds(soundsRef);
     setCategory(getRandomCategory());
     setTimeLeft(15);
     setIsActive(true);
   };
 
   const stopGame = () => {
-    stopBeep();
+    stopAllSounds(soundsRef);
     setIsActive(false);
     setTimeLeft(-1);
   };
+
+  useEffect(() => {
+    return () => {
+      stopAllSounds(soundsRef);
+    };
+  }, []);
 
   return (
     <>
