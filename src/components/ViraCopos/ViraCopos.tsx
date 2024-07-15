@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import toggleFullScreen from '../../utils/fullscreen';
 import useSound from 'use-sound';
 import clickSound from '/sounds/click.mp3';
 import gameOverSound from '/sounds/game-over.mp3';
@@ -10,14 +11,6 @@ const ViraCopos = () => {
   const [gameOver, setGameOver] = useState(false);
   const [playClick] = useSound(clickSound);
   const [playGameOver] = useSound(gameOverSound);
-
-  function toggleFullScreen() {
-    if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen();
-    } else if (document.exitFullscreen) {
-      document.exitFullscreen();
-    }
-  }
 
   const handleDrawNumber = () => {
     const randomNum = Math.floor(Math.random() * 51);

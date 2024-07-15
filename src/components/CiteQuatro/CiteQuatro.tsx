@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import toggleFullScreen from '../../utils/fullscreen';
 import useSound from 'use-sound';
 import beepSound from '/sounds/beep.mp3';
 import buzzerSound from '/sounds/buzzer.mp3';
@@ -24,14 +25,6 @@ const CiteQuatro = () => {
     };
     fetchCategories();
   }, []);
-
-  function toggleFullScreen() {
-    if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen();
-    } else if (document.exitFullscreen) {
-      document.exitFullscreen();
-    }
-  }
 
   useEffect(() => {
     let timer: NodeJS.Timeout;
