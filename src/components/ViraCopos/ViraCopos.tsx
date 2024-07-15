@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { isFullScreenEnabled, toggleFullScreen } from '../../utils/fullscreen';
 import useSound from 'use-sound';
 import clickSound from '/sounds/click.mp3';
 import gameOverSound from '/sounds/game-over.mp3';
@@ -50,6 +51,11 @@ const ViraCopos = () => {
   return (
     <div className="vira-copos-container">
       <img className={`logo ${chosen === null ? 'home' : 'game'}`} src='/images/vira-copos-logo.png' alt='Vira Copos' />
+      {isFullScreenEnabled() && (
+        <button className="full-screen-button" onClick={toggleFullScreen}>
+          <img className="full-screen-icon" src='/icons/fullscreen.png' alt='Tela cheia' />
+        </button>
+      )}
       {chosen === null ? (
         <button className="draw-button" onClick={handleDrawNumber}>Sortear</button>
       ) : (

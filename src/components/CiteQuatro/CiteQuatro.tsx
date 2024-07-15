@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { isFullScreenEnabled, toggleFullScreen } from '../../utils/fullscreen';
 import useSound from 'use-sound';
 import beepSound from '/sounds/beep.mp3';
 import buzzerSound from '/sounds/buzzer.mp3';
@@ -65,6 +66,11 @@ const CiteQuatro = () => {
       <div className="background-blur"></div>
       <div className="container">
         <img className='logo' src='/images/cite-4-logo.png' alt='Cite 4' />
+        {isFullScreenEnabled() && (
+          <button className="full-screen-button" onClick={toggleFullScreen}>
+            <img className="full-screen-icon" src='/icons/fullscreen.png' alt='Tela cheia' />
+          </button>
+        )}
         {isActive ? (
           <div className='content'>
             <div className="timer-circle">
