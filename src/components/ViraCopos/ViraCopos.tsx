@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
-import { isFullScreenEnabled, toggleFullScreen } from '../../utils/fullscreen';
+import { isFullScreenEnabled } from '../../utils/fullscreen';
 import { stopAllSounds } from '../../utils/soundUtils';
+import BackButton from '../buttons/BackButton/BackButton';
+import FullScreenButton from '../buttons/FullScreenButton/FullScreenButton';
 import useSound from 'use-sound';
 import clickSound from '/sounds/click.mp3';
 import gameOverSound from '/sounds/game-over.mp3';
@@ -12,6 +14,8 @@ const ViraCopos = () => {
   const [gameOver, setGameOver] = useState(false);
   const [playClick, { stop: stopClick }] = useSound(clickSound);
   const [playGameOver, { stop: stopGameOver }] = useSound(gameOverSound);
+
+  const canOpenFullScreen = isFullScreenEnabled();
 
   const soundsRef = useRef<{ [key: string]: () => void }>({});
 
@@ -66,12 +70,9 @@ const ViraCopos = () => {
 
   return (
     <div className="vira-copos-container">
+      <BackButton />
       <img className={`logo ${chosen === null ? 'home' : 'game'}`} src='/images/vira-copos-logo.png' alt='Vira Copos' />
-      {isFullScreenEnabled() && (
-        <button className="full-screen-button" onClick={toggleFullScreen}>
-          <img className="full-screen-icon" src='/icons/fullscreen.png' alt='Tela cheia' />
-        </button>
-      )}
+      {canOpenFullScreen && <FullScreenButton />}
       {chosen === null ? (
         <button className="draw-button" onClick={handleDrawNumber}>Sortear</button>
       ) : (

@@ -44,26 +44,6 @@ body {
   border-radius: 10px;
 }
 
-.full-screen-button {
-  position: fixed;
-  top: 30px;
-  right: 30px;
-  padding: 0;
-  background-color: #000;
-  color: #fff;
-
-  &:hover {
-    background-color: #000;
-    color: #fff;
-  }
-}
-
-.full-screen-icon {
-  height: 25px;
-  width: auto;
-  background-color: #fff;
-}
-
 .content {
   display: flex;
   flex-direction: column;

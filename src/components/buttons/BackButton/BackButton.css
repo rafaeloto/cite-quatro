@@ -1,0 +1,8 @@
+.back-button {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  height: 35px;
+  border-radius: 50px;
+  border: solid 1px #fff;
+}

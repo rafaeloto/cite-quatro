@@ -1,6 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
-import { isFullScreenEnabled, toggleFullScreen } from '../../utils/fullscreen';
+import { isFullScreenEnabled } from '../../utils/fullscreen';
 import { stopAllSounds } from '../../utils/soundUtils';
+import BackButton from '../buttons/BackButton/BackButton';
+import FullScreenButton from '../buttons/FullScreenButton/FullScreenButton';
 import useSound from 'use-sound';
 import beepSound from '/sounds/beep.mp3';
 import buzzerSound from '/sounds/buzzer.mp3';
@@ -13,6 +15,8 @@ const CiteQuatro = () => {
   const [categories, setCategories] = useState<{ title: string, answers: string[] }[]>([]);
   const [playBeep, { stop: stopBeep }] = useSound(beepSound);
   const [playBuzzer, { stop: stopBuzzer }] = useSound(buzzerSound);
+
+  const canOpenFullScreen = isFullScreenEnabled()
 
   const soundsRef = useRef<{ [key: string]: () => void }>({});
 
@@ -79,12 +83,9 @@ const CiteQuatro = () => {
     <>
       <div className="background-blur"></div>
       <div className="container">
+        <BackButton />
         <img className='logo' src='/images/cite-4-logo.png' alt='Cite 4' />
-        {isFullScreenEnabled() && (
-          <button className="full-screen-button" onClick={toggleFullScreen}>
-            <img className="full-screen-icon" src='/icons/fullscreen.png' alt='Tela cheia' />
-          </button>
-        )}
+        {canOpenFullScreen && <FullScreenButton />}
         {isActive ? (
           <div className='content'>
             <div className="timer-circle">
