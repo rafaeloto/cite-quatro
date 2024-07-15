@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { isFullScreenEnabled, toggleFullScreen } from '../../utils/fullscreen';
+import { stopAllSounds } from '../../utils/soundUtils';
 import useSound from 'use-sound';
 import clickSound from '/sounds/click.mp3';
 import gameOverSound from '/sounds/game-over.mp3';
@@ -9,10 +10,18 @@ const ViraCopos = () => {
   const [chosen, setChosen] = useState<number | null>(null);
   const [eliminationStatus, setEliminationStatus] = useState<boolean[]>(Array(51).fill(false));
   const [gameOver, setGameOver] = useState(false);
-  const [playClick] = useSound(clickSound);
-  const [playGameOver] = useSound(gameOverSound);
+  const [playClick, { stop: stopClick }] = useSound(clickSound);
+  const [playGameOver, { stop: stopGameOver }] = useSound(gameOverSound);
+
+  const soundsRef = useRef<{ [key: string]: () => void }>({});
+
+  useEffect(() => {
+    soundsRef.current['clickSound'] = stopClick;
+    soundsRef.current['gameOverSound'] = stopGameOver;
+  }, [stopClick, stopGameOver]);
 
   const handleDrawNumber = () => {
+    stopAllSounds(soundsRef);
     const randomNum = Math.floor(Math.random() * 51);
     setChosen(randomNum);
     setEliminationStatus(Array(51).fill(false));
@@ -22,6 +31,7 @@ const ViraCopos = () => {
   const handleButtonClick = (index: number) => {
     if (chosen === null) return;
 
+    stopAllSounds(soundsRef);
     const newEliminated = [...eliminationStatus];
 
     if (index === chosen) {
@@ -47,6 +57,12 @@ const ViraCopos = () => {
       playClick();
     }
   };
+
+  useEffect(() => {
+    return () => {
+      stopAllSounds(soundsRef);
+    };
+  }, []);
 
   return (
     <div className="vira-copos-container">
