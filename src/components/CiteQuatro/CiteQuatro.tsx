@@ -25,15 +25,13 @@ const CiteQuatro = () => {
     fetchCategories();
   }, []);
 
-  useEffect(() => {
-    const requestFullscreen = () => {
-      const elem = document.documentElement;
-      if (elem.requestFullscreen) {
-        elem.requestFullscreen();
-      }
-    };
-    requestFullscreen();
-  }, []);
+  function toggleFullScreen() {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen();
+    } else if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
+  }
 
   useEffect(() => {
     let timer: NodeJS.Timeout;
@@ -75,6 +73,9 @@ const CiteQuatro = () => {
       <div className="background-blur"></div>
       <div className="container">
         <img className='logo' src='/images/cite-4-logo.png' alt='Cite 4' />
+        <button className="full-screen-button" onClick={toggleFullScreen}>
+          <img className="full-screen-icon" src='/icons/fullscreen.png' alt='Tela cheia' />
+        </button>
         {isActive ? (
           <div className='content'>
             <div className="timer-circle">

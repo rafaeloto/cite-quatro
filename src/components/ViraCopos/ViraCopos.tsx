@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import useSound from 'use-sound';
 import clickSound from '/sounds/click.mp3';
 import gameOverSound from '/sounds/game-over.mp3';
@@ -11,15 +11,13 @@ const ViraCopos = () => {
   const [playClick] = useSound(clickSound);
   const [playGameOver] = useSound(gameOverSound);
 
-  useEffect(() => {
-    const requestFullscreen = () => {
-      const elem = document.documentElement;
-      if (elem.requestFullscreen) {
-        elem.requestFullscreen();
-      }
-    };
-    requestFullscreen();
-  }, []);
+  function toggleFullScreen() {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen();
+    } else if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
+  }
 
   const handleDrawNumber = () => {
     const randomNum = Math.floor(Math.random() * 51);
@@ -60,6 +58,9 @@ const ViraCopos = () => {
   return (
     <div className="vira-copos-container">
       <img className={`logo ${chosen === null ? 'home' : 'game'}`} src='/images/vira-copos-logo.png' alt='Vira Copos' />
+      <button className="full-screen-button" onClick={toggleFullScreen}>
+        <img className="full-screen-icon" src='/icons/fullscreen.png' alt='Tela cheia' />
+      </button>
       {chosen === null ? (
         <button className="draw-button" onClick={handleDrawNumber}>Sortear</button>
       ) : (
