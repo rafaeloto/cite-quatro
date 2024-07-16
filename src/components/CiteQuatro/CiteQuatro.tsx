@@ -13,6 +13,12 @@ const CiteQuatro = () => {
   const [timeLeft, setTimeLeft] = useState(15);
   const [category, setCategory] = useState<{ title: string, answers: string[] }>({ title: '', answers: [] });
   const [categories, setCategories] = useState<{ title: string, answers: string[] }[]>([]);
+
+  const [usedCategories, setUsedCategories] = useState<{ title: string, answers: string[] }[]>(() => {
+    const saved = localStorage.getItem('usedCategories');
+    return saved ? JSON.parse(saved) : [];
+  });
+
   const [playBeep, { stop: stopBeep }] = useSound(beepSound);
   const [playBuzzer, { stop: stopBuzzer }] = useSound(buzzerSound);
 
@@ -56,8 +62,15 @@ const CiteQuatro = () => {
   }, [isActive, timeLeft, playBeep, playBuzzer, stopBeep]);
 
   const getRandomCategory = () => {
-    const randomIndex = Math.floor(Math.random() * categories.length);
-    return categories[randomIndex];
+    const availableCategories = categories.filter(cat => !usedCategories.includes(cat));
+    const randomIndex = Math.floor(Math.random() * availableCategories.length);
+    const selectedCategory = availableCategories[randomIndex];
+    setUsedCategories(prevUsed => {
+      const newUsed = [...prevUsed, selectedCategory];
+      localStorage.setItem('usedCategories', JSON.stringify(newUsed));
+      return newUsed;
+    });
+    return selectedCategory;
   };
 
   const startGame = () => {
@@ -73,6 +86,26 @@ const CiteQuatro = () => {
     setTimeLeft(-1);
   };
 
+  const resetUsedCategories = () => {
+    localStorage.removeItem('usedCategories')
+    setUsedCategories([]);
+  }
+
+  const getButtonLabel = () => {
+    if (usedCategories.length === categories.length) {
+      return 'Resetar categorias';
+    }
+    return `Começar${timeLeft <= 0 ? ' de novo' : ''}`;
+  };
+
+  const handleButtonClick = () => {
+    if (usedCategories.length === categories.length) {
+      resetUsedCategories();
+    } else {
+      startGame();
+    }
+  };
+
   useEffect(() => {
     return () => {
       stopAllSounds(soundsRef);
@@ -84,8 +117,14 @@ const CiteQuatro = () => {
       <div className="background-blur"></div>
       <div className="container">
         <BackButton />
-        <img className='logo' src='/images/cite-4-logo.png' alt='Cite 4' />
+        <div className='used-categories'>
+          <p>{`${usedCategories.length}/${categories.length}`}</p>
+          {!!usedCategories.length && (
+            <button onClick={resetUsedCategories}>Resetar Categorias</button>
+          )}
+        </div>
         {canOpenFullScreen && <FullScreenButton />}
+        <img className='logo' src='/images/cite-4-logo.png' alt='Cite 4' />
         {isActive ? (
           <div className='content'>
             <div className="timer-circle">
@@ -117,7 +156,9 @@ const CiteQuatro = () => {
                 </ul>
               </>
             ) : null}
-            <button onClick={startGame}>{`Começar${timeLeft <= 0 ? ' de novo' : ''}`}</button>
+            <button onClick={handleButtonClick}>
+              {getButtonLabel()}
+            </button>
           </div>
         )}
       </div>

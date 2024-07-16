@@ -39,6 +39,25 @@ body {
   z-index: 1;
 }
 
+.used-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: fixed;
+  top: 40px;
+
+  p {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  button {
+    font-size: 15px;
+    background-color: transparent;
+    padding: 0;
+  }
+}
+
 .logo {
   height: 150px;
   border-radius: 10px;
