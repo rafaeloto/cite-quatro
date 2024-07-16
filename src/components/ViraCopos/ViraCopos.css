@@ -97,6 +97,55 @@ body {
   }
 }
 
+.reset-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 40px;
+  width: 250px;
+  z-index: 1000;
+  text-align: center;
+  border-radius: 15px;
+  border: #fff solid 1px;
+  background-color: #000;
+  color: #fff;
+  font-size: 30px;
+  transform: translate(-50%, -50%);
+  animation: jumpIn 0.3s ease forwards;
+
+  input {
+    background-color: transparent;
+    font-size: 30px;
+    color: #fff;
+    border: none;
+    border-bottom: 2px solid #fff;
+    text-align: center;
+    width: 3ch;
+    outline: none;
+    margin: 0;
+  }
+
+  buttton {
+    padding: 20px 40px;
+    font-size: 30px;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #ffcc00;
+      color: #000;
+    }
+  }
+}
+
 .animation-container {
   position: absolute;
   top: 50%;

@@ -14,6 +14,9 @@ const ViraCopos = () => {
   const [chosen, setChosen] = useState<number | null>(null);
   const [eliminationStatus, setEliminationStatus] = useState<boolean[]>(Array(51).fill(false));
   const [gameOver, setGameOver] = useState(false);
+  const [isResetModalVisible, setIsResetModalVisible] = useState(false);
+  const [isPickNumber, setIsPickNumber] = useState(false);
+  const [pickedNumber, setPickedNumber] = useState<number | null>(null);
   const [firstClickHit, setFirstClickHit] = useState(false);
 
   const [playClick, { stop: stopClick }] = useSound(clickSound);
@@ -23,6 +26,7 @@ const ViraCopos = () => {
   const canOpenFullScreen = isFullScreenEnabled();
 
   const soundsRef = useRef<{ [key: string]: () => void }>({});
+  const inputRef = useRef<HTMLInputElement | null>(null);
 
   useEffect(() => {
     soundsRef.current['clickSound'] = stopClick;
@@ -30,14 +34,33 @@ const ViraCopos = () => {
     soundsRef.current['firstClickHitSound'] = stopFirstClickHit;
   }, [stopClick, stopGameOver, stopFirstClickHit]);
 
-  const handleDrawNumber = () => {
+  const handleOpenResetModal = () => {
     stopAllSounds(soundsRef);
-    const randomNum = Math.floor(Math.random() * 51);
-    setChosen(randomNum)
+    setFirstClickHit(false);
+    setIsResetModalVisible(true);
+  };
+
+  const restartGame = () => {
     setEliminationStatus(Array(51).fill(false));
     setGameOver(false);
     setFirstClickHit(false);
+    setIsResetModalVisible(false);
+    setIsPickNumber(false);
+    setPickedNumber(null);
+  }
+
+  const handleDrawNumber = () => {
+    const randomNum = Math.floor(Math.random() * 51);
+    setChosen(randomNum);
+    restartGame();
   };
+
+  const handlePickNumber = () => {
+    if (pickedNumber !== null && pickedNumber >= 0 && pickedNumber < 51) {
+      setChosen(pickedNumber)
+      restartGame();
+    }
+  }
 
   const handleButtonClick = (index: number) => {
     if (chosen === null) return;
@@ -76,6 +99,12 @@ const ViraCopos = () => {
   };
 
   useEffect(() => {
+    if (isPickNumber && inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, [isPickNumber]);
+
+  useEffect(() => {
     return () => {
       stopAllSounds(soundsRef);
     };
@@ -87,7 +116,7 @@ const ViraCopos = () => {
       <img className={`logo ${chosen === null ? 'home' : 'game'}`} src='/images/vira-copos-logo.png' alt='Vira Copos' />
       {canOpenFullScreen && <FullScreenButton />}
       {chosen === null ? (
-        <button className="draw-button" onClick={handleDrawNumber}>Sortear</button>
+        <button className="draw-button" onClick={handleOpenResetModal}>Começar</button>
       ) : (
         <div className="grid">
           {Array.from({ length: 51 }).map((_, index) => (
@@ -102,11 +131,35 @@ const ViraCopos = () => {
           ))}
           <button
             className="grid-button reset-button"
-            onClick={handleDrawNumber}
+            onClick={handleOpenResetModal}
             disabled={!gameOver}
           >
-            Sortear
+            Começar
           </button>
+        </div>
+      )}
+      {isResetModalVisible && (
+        <div className='reset-modal'>
+          {!isPickNumber ? (
+            <>
+              <button onClick={handleDrawNumber}>Sortear</button>
+              <button onClick={() => setIsPickNumber(true)}>Escolher</button>
+            </>
+          ) : (
+            <>
+              <label htmlFor="pick-number-input">Escolha um número:</label>
+              <input
+                ref={inputRef}
+                id='pick-number-input'
+                type='number'
+                value={pickedNumber ?? ''}
+                onChange={(e) => setPickedNumber(parseInt(e.target.value))}
+                min="0"
+                max="50"
+              />
+              <button onClick={handlePickNumber}>Escolher</button>
+            </>
+          )}
         </div>
       )}
       {firstClickHit && (
