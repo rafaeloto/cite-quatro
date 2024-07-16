@@ -116,7 +116,7 @@ const ViraCopos = () => {
       <img className={`logo ${chosen === null ? 'home' : 'game'}`} src='/images/vira-copos-logo.png' alt='Vira Copos' />
       {canOpenFullScreen && <FullScreenButton />}
       {chosen === null ? (
-        <button className="draw-button" onClick={handleOpenResetModal}>Começar</button>
+        <button className="common-button" onClick={handleOpenResetModal}>Começar</button>
       ) : (
         <div className="grid">
           {Array.from({ length: 51 }).map((_, index) => (
@@ -142,8 +142,18 @@ const ViraCopos = () => {
         <div className='reset-modal'>
           {!isPickNumber ? (
             <>
-              <button onClick={handleDrawNumber}>Sortear</button>
-              <button onClick={() => setIsPickNumber(true)}>Escolher</button>
+              <button
+                onClick={handleDrawNumber}
+                className='common-button'
+              >
+                Sortear
+              </button>
+              <button
+                onClick={() => setIsPickNumber(true)}
+                className='common-button'
+              >
+                Escolher
+              </button>
             </>
           ) : (
             <>
@@ -157,7 +167,12 @@ const ViraCopos = () => {
                 min="0"
                 max="50"
               />
-              <button onClick={handlePickNumber}>Escolher</button>
+              <button
+                onClick={handlePickNumber}
+                className='common-button'
+              >
+                Escolher
+              </button>
             </>
           )}
         </div>
