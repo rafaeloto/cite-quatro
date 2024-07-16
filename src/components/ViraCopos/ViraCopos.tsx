@@ -32,9 +32,8 @@ const ViraCopos = () => {
 
   const handleDrawNumber = () => {
     stopAllSounds(soundsRef);
-    // const randomNum = Math.floor(Math.random() * 51);
-    // setChosen(randomNum)
-    setChosen(15);
+    const randomNum = Math.floor(Math.random() * 51);
+    setChosen(randomNum)
     setEliminationStatus(Array(51).fill(false));
     setGameOver(false);
     setFirstClickHit(false);
