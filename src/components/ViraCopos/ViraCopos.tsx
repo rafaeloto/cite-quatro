@@ -6,14 +6,19 @@ import FullScreenButton from '../buttons/FullScreenButton/FullScreenButton';
 import useSound from 'use-sound';
 import clickSound from '/sounds/click.mp3';
 import gameOverSound from '/sounds/game-over.mp3';
+import firstClickHitSound from '/sounds/first-click-hit.mp3';
+import firstClickHitGIF from '/gifs/first-click-hit.gif';
 import './ViraCopos.css';
 
 const ViraCopos = () => {
   const [chosen, setChosen] = useState<number | null>(null);
   const [eliminationStatus, setEliminationStatus] = useState<boolean[]>(Array(51).fill(false));
   const [gameOver, setGameOver] = useState(false);
+  const [firstClickHit, setFirstClickHit] = useState(false);
+
   const [playClick, { stop: stopClick }] = useSound(clickSound);
   const [playGameOver, { stop: stopGameOver }] = useSound(gameOverSound);
+  const [playFirstClickHit, { stop: stopFirstClickHit }] = useSound(firstClickHitSound);
 
   const canOpenFullScreen = isFullScreenEnabled();
 
@@ -22,14 +27,16 @@ const ViraCopos = () => {
   useEffect(() => {
     soundsRef.current['clickSound'] = stopClick;
     soundsRef.current['gameOverSound'] = stopGameOver;
-  }, [stopClick, stopGameOver]);
+    soundsRef.current['firstClickHitSound'] = stopFirstClickHit;
+  }, [stopClick, stopGameOver, stopFirstClickHit]);
 
   const handleDrawNumber = () => {
     stopAllSounds(soundsRef);
     const randomNum = Math.floor(Math.random() * 51);
-    setChosen(randomNum);
+    setChosen(randomNum)
     setEliminationStatus(Array(51).fill(false));
     setGameOver(false);
+    setFirstClickHit(false);
   };
 
   const handleButtonClick = (index: number) => {
@@ -39,6 +46,13 @@ const ViraCopos = () => {
     const newEliminated = [...eliminationStatus];
 
     if (index === chosen) {
+      if (newEliminated.every((status) => status === false)) {
+        setFirstClickHit(true);
+        playFirstClickHit();
+      } else {
+        playGameOver();
+      }
+
       for (let i = 0; i < 51; i++) {
         if (i !== chosen) {
           newEliminated[i] = true;
@@ -46,7 +60,6 @@ const ViraCopos = () => {
       }
       setEliminationStatus(newEliminated);
       setGameOver(true);
-      playGameOver();
     } else {
       if (index > chosen) {
         for (let i = index; i < 51; i++) {
@@ -94,6 +107,13 @@ const ViraCopos = () => {
           >
             Sortear
           </button>
+        </div>
+      )}
+      {firstClickHit && (
+        <div className="animation-container">
+          <img src={firstClickHitGIF} alt='De primeira!' className="first-click-hit-gif" />
+          <p>De primeira!</p>
+          <p>VIRA O COPO!</p>
         </div>
       )}
     </div>
