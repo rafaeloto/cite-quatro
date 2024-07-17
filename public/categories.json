@@ -956,5 +956,9 @@
   {
     "title": "Utensílios de Cozinha",
     "answers": ["Faca de Chef", "Tábua de Corte", "Panela", "Espátula"]
+  },
+  {
+    "title": "Legumes",
+    "answers": ["Abóbora", "Cenoura", "Batata", "Beterraba"]
   }
 ]
