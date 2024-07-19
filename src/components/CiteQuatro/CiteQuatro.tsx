@@ -62,7 +62,9 @@ const CiteQuatro = () => {
   }, [isActive, timeLeft, playBeep, playBuzzer, stopBeep]);
 
   const getRandomCategory = () => {
-    const availableCategories = categories.filter(cat => !usedCategories.includes(cat));
+    const availableCategories = categories.filter(cat =>
+      !usedCategories.some(usedCat => usedCat.title === cat.title)
+    );
     const randomIndex = Math.floor(Math.random() * availableCategories.length);
     const selectedCategory = availableCategories[randomIndex];
     setUsedCategories(prevUsed => {
